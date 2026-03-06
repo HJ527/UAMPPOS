@@ -1,0 +1,10 @@
+
+<ng-container *ngIf="!this.isSvg; else svg">
+  <i [class]="'ca-' + this.icon"></i>
+</ng-container>
+
+<ng-template #svg>
+  <svg class="icon">
+    <use [attr.href]="'assets/icons.svg#icon-' + this.icon" fill="currentColor"></use>
+  </svg>
+</ng-template>

@@ -1,0 +1,28 @@
+<div class="card-image" [ngStyle]="{
+  'gap':gap
+}">
+  <ca-picture class="card-image__picture" [srcImg]="srcImg"></ca-picture>
+  <div class="card-image__content" [ngStyle]="{
+    'gap':gap
+  }">
+    <ca-title class="card-image__content-title" [fontSize]="{ value: '1.2rem' }" [text]="title"></ca-title>
+    <ng-container *ngIf="subtitle">
+      <ca-subtitle  class="card-image__content-subtitle" [fontSize]="{ value: '1rem' }" [text]="subtitle"></ca-subtitle>
+    </ng-container>
+    <ng-container *ngIf="labels.length">
+      <ng-container *ngFor="let label of labels">
+        <ca-icon-label
+          class="card-image__content-icon-label"
+          fontStyle
+          [fontSize]="{ value: '1rem' }"
+          [icon]="label.iconOptions.icon"
+          [isSvg]="label.iconOptions.isSvg ?? false"
+          [label]="label.labelOptions.label"
+          [target]="label.labelOptions.target"
+        ></ca-icon-label>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #buttons> </ng-template>

@@ -1,0 +1,1 @@
+export type CustomSize = `${string}px` | `${string}rem` | `${string}em` | `${string}%`;

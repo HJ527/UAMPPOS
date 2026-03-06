@@ -1,0 +1,16 @@
+<picture class="picture">
+  <ng-container *ngIf="sources.length > 0">
+    <ng-container *ngFor="let source of sources">
+      <source
+        class="picture__source"
+        [media]="'(min-width:{{source.media}})'"
+        [srcset]="source.srcset"
+      />
+    </ng-container>
+  </ng-container>
+  <img
+    class="picture__img"
+    [src]="srcImg"
+    [alt]="altImg"
+  />
+</picture>

@@ -1,0 +1,7 @@
+export * from "./button/button.component"
+export * from "./icon/icon.component"
+export * from "./label/label.component"
+export * from "./main-title/main-title.component"
+export * from "./paragraph/paragraph.component"
+export * from "./picture/picture.component"
+export * from "./title/title.component"
