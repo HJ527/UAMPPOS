@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { ParagraphComponent, PictureComponent, TitleComponent } from '@components/atom';
-import { FontStyleDirective } from '@theme/directives';
+import { PictureComponent, TitleComponent } from '@components/atom';
 import { NgFor, NgIf, NgStyle } from '@angular/common';
-import { IconButtonComponent, IconLabelComponent } from '@components/molecule';
-import { CustomColor, CustomSize } from '@theme/types';
+import { IconLabelComponent } from '@components/molecule';
+import { FontStyleDirective } from '../../../../theme/directives';
+import { CustomSize } from '@theme/types';
 
 @Component({
   selector: 'ca-card-image',
@@ -15,25 +15,24 @@ import { CustomColor, CustomSize } from '@theme/types';
     FontStyleDirective,
     NgIf,
     NgFor,
-    NgStyle
+    NgStyle,
   ],
   templateUrl: './card-image.component.html',
-  styleUrl: './card-image.component.scss'
+  styleUrl: './card-image.component.scss',
 })
 export class CardImageComponent {
-
   @Input() srcImg!: string;
   @Input() title!: string;
   @Input() subtitle?: string;
   @Input() labels: {
-    labelOptions:{
-      label: string,
-      target?: string,
-    },
-    iconOptions:{
-      icon: string,
-      isSvg?: boolean,
-    }
+    labelOptions: {
+      label: string;
+      target?: string;
+    };
+    iconOptions: {
+      icon: string;
+      isSvg?: boolean;
+    };
   }[] = [];
-  @Input() gap: CustomSize = '1rem'
+  @Input() gap: CustomSize = '1rem';
 }
