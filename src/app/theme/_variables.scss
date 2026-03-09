@@ -1,19 +1,41 @@
-//Variables text color
-$theme-text-color-01:#0D1F22;
-$theme-text-color-02:#595F72;
-$theme-text-color-03:#95B2B0;
-$theme-text-color-04:#FFFFFF;
-$theme-text-color-05:#9FC727;
-$theme-text-color-06:#CC2936;
+// --- PALETA DE COLORES BASE ---
 
+// Marca y Primarios
+$color-primary: #6b0c17;
+$color-primary-rgb: 107, 12, 23; // Para funciones de transparencia
 
-//Variables ui color
-$theme-ui-color-01:#9FC727;
-$theme-ui-color-02:#DC9596;
-$theme-ui-color-03:#595F72;
-$theme-ui-color-03:#CC2936;
+// Neutros (Textos y Bordes)
+$color-neutral-dark: #0f172a; // Texto principal / Completado
+$color-neutral-medium: #64748b; // Orden activa / Texto secundario
+$color-neutral-light: #f1f5f9; // Background de tabs / elementos suaves
 
-//Variables bg
+// Superficies (Fondos de aplicación)
+$color-surface: #f7f5f5;
+$color-light: #ffffff;
 
-$theme-bg-color-01: #FFFFFF
+// Semánticos (Estados)
+$color-info: #3b82f6; // Nueva orden / Azul
+$color-error: #ef4444; // Urgente / Error
+$color-warning: #ea580c; // Advertencias / Naranja
 
+// --- VARIANTES CON ALPHA (10% y 20%) ---
+// Útiles para fondos de botones, tarjetas o alertas suaves
+
+// Primary Alpha
+$color-primary-alpha-10: rgba($color-primary, 0.1);
+$color-primary-alpha-20: rgba($color-primary, 0.2);
+$color-primary-alpha-60: rgba($color-primary, 0.6);
+
+// Info Alpha (Nuevas órdenes)
+$color-info-alpha-10: rgba($color-info, 0.1);
+$color-info-alpha-20: rgba($color-info, 0.2);
+
+// Error Alpha (Urgente)
+$color-error-alpha-10: rgba($color-error, 0.1);
+$color-error-alpha-20: rgba($color-error, 0.2);
+
+// Warning Alpha
+$color-warning-alpha-10: rgba($color-warning, 0.1);
+
+// Neutral Alpha
+$color-neutral-dark-alpha-10: rgba($color-neutral-dark, 0.1);

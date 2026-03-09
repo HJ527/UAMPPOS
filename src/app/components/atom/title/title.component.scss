@@ -1,9 +1,9 @@
+@use "../../../theme/" as theme;
+
 .normal-title {
   margin: 0;
-  font-size: x-large;
+  color: theme.$color-neutral-dark;
   &--subtitle {
-    font-size: large;
-    color: #A2A2A2;
+    color: theme.$color-primary;
   }
 }
-

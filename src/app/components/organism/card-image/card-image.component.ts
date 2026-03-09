@@ -2,9 +2,8 @@ import { Component, Input } from '@angular/core';
 import { PictureComponent, TitleComponent } from '@components/atom';
 import { NgFor, NgIf, NgStyle } from '@angular/common';
 import { IconLabelComponent } from '@components/molecule';
-import { FontStyleDirective } from '../../../../theme/directives';
+import { FontStyleDirective } from '@theme/directives';
 import { CustomSize } from '@theme/types';
-
 @Component({
   selector: 'ca-card-image',
   standalone: true,
@@ -21,8 +20,8 @@ import { CustomSize } from '@theme/types';
   styleUrl: './card-image.component.scss',
 })
 export class CardImageComponent {
-  @Input() srcImg!: string;
-  @Input() title!: string;
+  @Input({ required: true }) srcImg!: string;
+  @Input({ required: true }) title!: string;
   @Input() subtitle?: string;
   @Input() labels: {
     labelOptions: {

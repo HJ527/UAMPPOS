@@ -1,0 +1,62 @@
+@use "../../theme/" as theme;
+
+.checkout {
+  &__products {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.6rem;
+    padding: 1.6rem;
+  }
+  &__check {
+    background: theme.$color-light;
+    .resume {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      padding: 1.3rem 1.6rem;
+      &__icon {
+        height: 4rem;
+        width: 4rem;
+        padding: 1rem;
+        background: theme.$color-primary-alpha-10;
+        border-radius: 0.75rem;
+        color: theme.$color-primary;
+      }
+      &__texts {
+        display: flex;
+        flex-direction: column;
+      }
+      &__title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: theme.$color-primary-alpha-60;
+      }
+      &__items {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: theme.$color-neutral-dark;
+      }
+      &__total {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: theme.$color-primary;
+        margin-left: auto;
+      }
+      &__buttons {
+        display: grid;
+        grid-template-columns: 40% 1fr;
+        grid-template-rows: 7.6rem;
+        gap: 0.8rem;
+        padding: 1rem;
+      }
+      &__order-button {
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+      &__pay-button {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -1,1 +1,19 @@
-<button [innerText]="text" (click)="onClick.emit()"></button>
+<button
+  (click)="onClick.emit()"
+  [ngClass]="{
+    'icon-right': iconDirection === 'right',
+    'icon-top': iconDirection === 'top',
+    'icon-bottom': iconDirection === 'bottom',
+  }"
+>
+  @if (icon) {
+    <ca-icon
+      [icon]="icon"
+      [ngStyle]="{
+        height: iconHeight,
+        width: iconWidth,
+      }"
+    ></ca-icon>
+  }
+  <span>{{ text }}</span>
+</button>

@@ -1,13 +1,29 @@
-<div class="card-image" [ngStyle]="{
-  'gap':gap
-}">
+<div
+  class="card-image"
+  [ngStyle]="{
+    gap: gap,
+  }"
+>
   <ca-picture class="card-image__picture" [srcImg]="srcImg"></ca-picture>
-  <div class="card-image__content" [ngStyle]="{
-    'gap':gap
-  }">
-    <ca-title class="card-image__content-title" [fontSize]="{ value: '1.2rem' }" [text]="title"></ca-title>
+  <div
+    class="card-image__content"
+    [ngStyle]="{
+      gap: gap,
+    }"
+  >
+    <ca-title
+      class="card-image__content-title"
+      fontStyle
+      [fontSize]="{ value: '2rem' }"
+      [text]="title"
+    ></ca-title>
     <ng-container *ngIf="subtitle">
-      <ca-subtitle  class="card-image__content-subtitle" [fontSize]="{ value: '1rem' }" [text]="subtitle"></ca-subtitle>
+      <ca-subtitle
+        class="card-image__content-subtitle"
+        fontStyle
+        [fontSize]="{ value: '1rem' }"
+        [text]="subtitle"
+      ></ca-subtitle>
     </ng-container>
     <ng-container *ngIf="labels.length">
       <ng-container *ngFor="let label of labels">

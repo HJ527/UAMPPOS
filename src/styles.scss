@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+@use "./app/theme/" as theme;
+
+* {
+  box-sizing: border-box;
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba($color: #fff, $alpha: 0.5);
+    }
+  }
+  &::-webkit-scrollbar {
+    height: 1rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba($color: #fff, $alpha: 0);
+    border-radius: 2rem;
+  }
+}
+html {
+  background-color: theme.$color-surface;
+}

@@ -1,1 +1,58 @@
-<ca-card-image></ca-card-image>
+<div class="checkout__chips"></div>
+
+<div class="checkout__products">
+  <ca-card-image
+    [srcImg]="'assets/img/burger.png'"
+    [title]="'Hamburguesa'"
+    [subtitle]="'$80.00'"
+  ></ca-card-image>
+
+  <ca-card-image
+    [srcImg]="'assets/img/burger.png'"
+    [title]="'Hamburguesa'"
+    [subtitle]="'$80.00'"
+  ></ca-card-image>
+  <ca-card-image
+    [srcImg]="'assets/img/burger.png'"
+    [title]="'Hamburguesa'"
+    [subtitle]="'$80.00'"
+  ></ca-card-image>
+  <ca-card-image
+    [srcImg]="'assets/img/burger.png'"
+    [title]="'Hamburguesa'"
+    [subtitle]="'$80.00'"
+  ></ca-card-image>
+  <ca-card-image
+    [srcImg]="'assets/img/burger.png'"
+    [title]="'Hamburguesa'"
+    [subtitle]="'$80.00'"
+  ></ca-card-image>
+</div>
+
+<div class="checkout__check">
+  <div class="resume">
+    <ca-icon class="resume__icon" icon="sale-car"></ca-icon>
+    <div class="resume__texts">
+      <span class="resume__title">RESUMEN ORDEN</span>
+      <span class="resume__items">3 productos </span>
+    </div>
+    <span class="resume__total">{{ 200 | currency }}</span>
+  </div>
+  <div class="resume__buttons">
+    <ca-button
+      class="resume__order-button"
+      text="ORDEN"
+      icon="bill"
+      iconHeight="2rem"
+      iconWidth="2rem"
+      [btnStyle]="btnStyle['PRIMARY-ALPHA']"
+    ></ca-button>
+    <ca-button
+      class="resume__pay-button"
+      text="COBRAR"
+      icon="cash"
+      iconHeight="2.4rem"
+      iconWidth="2.4rem"
+    ></ca-button>
+  </div>
+</div>

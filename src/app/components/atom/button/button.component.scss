@@ -1,0 +1,88 @@
+@use "../../../theme/" as theme;
+
+:host {
+  vertical-align: middle;
+
+  // Estilos base para el botón interno
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 0.75rem 1.25rem;
+    font-size: inherit;
+    font-weight: inherit;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    font-family: inherit;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    &.icon-right {
+      flex-direction: row-reverse;
+    }
+    &.icon-top {
+      flex-direction: column;
+    }
+    &.icon-bottom {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .ca-icon {
+    min-height: 1.6rem;
+    min-width: 1.6rem;
+  }
+
+  // --- VARIANTES ---
+
+  // Color Base (6B0C17)
+  &.primary {
+    @include theme.button-variant(theme.$color-primary, white);
+  }
+  &.primary-alpha {
+    @include theme.button-variant(
+      theme.$color-primary-alpha-10,
+      theme.$color-primary
+    );
+  }
+
+  // Color para 'Nueva Orden'
+  &.info {
+    @include theme.button-variant(theme.$color-info, white);
+  }
+
+  // Color para 'Urgente / Cancelar'
+  &.danger {
+    @include theme.button-variant(theme.$color-error, white);
+  }
+
+  // Color para 'Advertencias'
+  &.warning {
+    @include theme.button-variant(theme.$color-warning, white);
+  }
+
+  // Estilo minimalista (Outline)
+  &.outline {
+    @include theme.button-variant(
+      transparent,
+      theme.$color-primary,
+      theme.$color-primary
+    );
+
+    button:hover {
+      background-color: theme.$color-primary-alpha-10;
+    }
+  }
+
+  // Estilo neutro / secundario
+  &.normal {
+    @include theme.button-variant(
+      theme.$color-neutral-light,
+      theme.$color-neutral-dark,
+      theme.$color-neutral-light
+    );
+  }
+}

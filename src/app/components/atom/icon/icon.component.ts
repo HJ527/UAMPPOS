@@ -7,9 +7,8 @@ import { NgClass, NgIf } from '@angular/common';
   imports: [NgIf],
   templateUrl: './icon.component.html',
   styleUrl: './icon.component.scss',
-
 })
 export class IconComponent {
-  @Input({required:true}) icon!: string;
+  @Input({ required: true }) icon!: string;
   @Input() isSvg = true;
 }

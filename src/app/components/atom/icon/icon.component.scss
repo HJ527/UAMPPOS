@@ -1,6 +1,15 @@
-
-.icon{
-  height: 100%;
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
   aspect-ratio: 1/1;
-  color: inherit;
+  width: inherit;
+  min-width: 1.6rem;
+  min-height: 1.6rem;
+}
+
+.icon {
+  height: inherit;
+  width: inherit;
 }
