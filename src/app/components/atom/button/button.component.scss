@@ -1,4 +1,4 @@
-@use "../../../theme/" as theme;
+@use "theme" as *;
 
 :host {
   vertical-align: middle;
@@ -40,49 +40,51 @@
 
   // Color Base (6B0C17)
   &.primary {
-    @include theme.button-variant(theme.$color-primary, white);
+    @include button-variant($color-primary, white);
   }
   &.primary-alpha {
-    @include theme.button-variant(
-      theme.$color-primary-alpha-10,
-      theme.$color-primary
-    );
+    @include button-variant($color-primary-alpha-10, $color-primary);
   }
 
   // Color para 'Nueva Orden'
   &.info {
-    @include theme.button-variant(theme.$color-info, white);
+    @include button-variant($color-info, white);
   }
 
   // Color para 'Urgente / Cancelar'
   &.danger {
-    @include theme.button-variant(theme.$color-error, white);
+    @include button-variant($color-error, white);
   }
 
   // Color para 'Advertencias'
   &.warning {
-    @include theme.button-variant(theme.$color-warning, white);
+    @include button-variant($color-warning, white);
   }
 
   // Estilo minimalista (Outline)
   &.outline {
-    @include theme.button-variant(
-      transparent,
-      theme.$color-primary,
-      theme.$color-primary
-    );
+    @include button-variant(transparent, $color-primary, $color-primary);
 
     button:hover {
-      background-color: theme.$color-primary-alpha-10;
+      background-color: $color-primary-alpha-10;
+    }
+  }
+
+  // Estilo minimalista (ghost)
+  &.ghost {
+    @include button-variant(transparent, $color-primary);
+
+    button:hover {
+      background-color: $color-primary-alpha-10;
     }
   }
 
   // Estilo neutro / secundario
   &.normal {
-    @include theme.button-variant(
-      theme.$color-neutral-light,
-      theme.$color-neutral-dark,
-      theme.$color-neutral-light
+    @include button-variant(
+      $color-neutral-light,
+      $color-neutral-dark,
+      $color-neutral-light
     );
   }
 }

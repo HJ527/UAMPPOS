@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-@use "./app/theme/" as theme;
+@use "theme" as *;
 
 * {
   box-sizing: border-box;
@@ -18,5 +18,10 @@
   }
 }
 html {
-  background-color: theme.$color-surface;
+  background-color: $color-surface;
+}
+
+html,
+body {
+  --ui-color-brand: #6b0c17; /* Tu color personalizado */
 }

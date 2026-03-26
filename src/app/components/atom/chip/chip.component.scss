@@ -1,0 +1,18 @@
+@use "theme" as *;
+
+:host {
+  padding: 0.8rem 2.4rem;
+  background-color: $color-primary-alpha-10;
+  color: $color-primary;
+  border-radius: 5rem;
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 700;
+  min-height: 4.4rem;
+  align-items: center;
+  justify-content: center;
+  &.active {
+    background-color: $color-primary;
+    color: $color-light;
+  }
+}

@@ -16,7 +16,7 @@ import { CustomSize } from '@theme/types';
   },
 })
 export class ButtonComponent {
-  @Input({ required: true }) text!: string;
+  @Input() label?: string;
   @Input() btnStyle: ButtonStyle = ButtonStyle.PRIMARY;
   @Input() icon?: string;
   @Input() iconDirection: ButtonIconDirection = ButtonIconDirection.TOP;

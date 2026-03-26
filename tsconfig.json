@@ -33,7 +33,9 @@
       "@shared/utils": ["./src/app/shared/utils"],
       "@theme/directives": ["./src/app/theme/directives"],
       "@theme/enums": ["./src/app/theme/enums"],
-      "@theme/types": ["./src/app/theme/types"]
+      "@theme/types": ["./src/app/theme/types"],
+      "@theme": ["./src/app/theme/index.scss"],
+      "@theme/*": ["./src/app/theme/*"]
     }
   },
   "angularCompilerOptions": {

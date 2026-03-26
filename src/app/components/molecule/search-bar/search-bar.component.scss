@@ -1,0 +1,28 @@
+@use "theme" as *;
+
+:host {
+  display: flex;
+  background-color: $color-primary-alpha-10;
+  min-height: 4.4rem;
+  padding: 1.3rem 1.6rem;
+  gap: 1.2rem;
+  border-radius: 1.2rem;
+  .search-bar {
+    &__icon {
+      height: 1.8rem;
+      width: 1.8rem;
+      color: $color-primary-alpha-60;
+    }
+    &__input {
+      background: none;
+      border: none;
+      width: 100%;
+      font-size: 1.6rem;
+      color: $color-primary-alpha-60;
+      font-weight: 600;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

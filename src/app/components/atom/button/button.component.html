@@ -15,5 +15,7 @@
       }"
     ></ca-icon>
   }
-  <span>{{ text }}</span>
+  @if (label) {
+    <span>{{ label }}</span>
+  }
 </button>

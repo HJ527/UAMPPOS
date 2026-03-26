@@ -23,6 +23,10 @@
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "preserveSymlinks": true,
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/app"]
+            },
             "assets": [
               "src/assets",
               {

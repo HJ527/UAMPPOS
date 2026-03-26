@@ -1,4 +1,11 @@
-<div class="checkout__chips"></div>
+<ca-header></ca-header>
+<div class="checkout__filters">
+  <ca-search-bar></ca-search-bar>
+  <mgp-filter-group
+    class="checkout__chips"
+    [filters]="filters"
+  ></mgp-filter-group>
+</div>
 
 <div class="checkout__products">
   <ca-card-image
@@ -31,7 +38,7 @@
 
 <div class="checkout__check">
   <div class="resume">
-    <ca-icon class="resume__icon" icon="sale-car"></ca-icon>
+    <mgp-icon class="resume__icon" name="sale-car"></mgp-icon>
     <div class="resume__texts">
       <span class="resume__title">RESUMEN ORDEN</span>
       <span class="resume__items">3 productos </span>
@@ -39,20 +46,29 @@
     <span class="resume__total">{{ 200 | currency }}</span>
   </div>
   <div class="resume__buttons">
-    <ca-button
+    <mgp-button
       class="resume__order-button"
-      text="ORDEN"
-      icon="bill"
-      iconHeight="2rem"
-      iconWidth="2rem"
-      [btnStyle]="btnStyle['PRIMARY-ALPHA']"
-    ></ca-button>
-    <ca-button
+      [icon]="{
+        name: 'bill',
+        direction: 'top',
+        height: '2rem',
+        width: '2rem',
+      }"
+    >
+      ORDEN
+    </mgp-button>
+
+    <mgp-button
       class="resume__pay-button"
-      text="COBRAR"
-      icon="cash"
-      iconHeight="2.4rem"
-      iconWidth="2.4rem"
-    ></ca-button>
+      variant="primary"
+      [icon]="{
+        name: 'cash',
+        direction: 'top',
+        height: '2rem',
+        width: '2rem',
+      }"
+    >
+      COBRAR
+    </mgp-button>
   </div>
 </div>

@@ -1,0 +1,14 @@
+@use "theme" as *;
+
+.header {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  height: 7.4rem;
+  padding: 0 2rem;
+  background: $color-light;
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+}

@@ -1,9 +1,12 @@
-@use "../../../theme/" as theme;
+@use "theme" as *;
 
 .normal-title {
   margin: 0;
-  color: theme.$color-neutral-dark;
+  color: $color-neutral-dark;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
   &--subtitle {
-    color: theme.$color-primary;
+    color: $color-primary;
   }
 }
